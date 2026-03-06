@@ -105,7 +105,7 @@ export default function ContactPage() {
                         id="phone"
                         name="phone"
                         className="w-full px-4 py-3 rounded-lg border border-neutral-200 focus:border-green-500 focus:ring-2 focus:ring-green-500/20 outline-none transition-all"
-                        placeholder="0400 000 000"
+                        placeholder="0448 869 115"
                       />
                     </div>
                     <div>
@@ -248,10 +248,10 @@ export default function ContactPage() {
                     <div>
                       <p className="text-sm text-neutral-500">Phone</p>
                       <a
-                        href="tel:0400000000"
+                        href="tel:0448869115"
                         className="text-green-700 font-medium hover:text-green-800 transition-colors"
                       >
-                        0400 000 000
+                        0448 869 115
                       </a>
                     </div>
                   </div>
