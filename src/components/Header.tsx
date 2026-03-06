@@ -24,7 +24,7 @@ export default function Header() {
               alt="Jade's Reset Cleaning"
               width={44}
               height={44}
-              className="w-9 h-9 sm:w-11 sm:h-11"
+              className="h-10 sm:h-14 w-auto"
             />
             <Image
               src="/logo-text.png"
