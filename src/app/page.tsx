@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const services = [
   {
@@ -155,38 +156,64 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-green-50 via-white to-sage-50 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36">
-          <div className="max-w-3xl">
-            <span className="inline-block text-green-700 font-medium text-sm tracking-wide uppercase mb-4">
-              Melbourne CBD &amp; Inner Suburbs
-            </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-green-900 leading-tight">
-              A clean home.
-              <br />
-              <span className="text-green-600">A calmer mind.</span>
-            </h1>
-            <p className="mt-6 text-lg sm:text-xl text-neutral-600 leading-relaxed max-w-2xl">
-              Professional residential cleaning that goes beyond surface-level tidying.
-              Reclaim your time, reduce stress and thrive in a space that feels truly
-              refreshed.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white px-8 py-3.5 rounded-lg font-semibold text-lg transition-colors"
-              >
-                Get a Free Quote
-              </Link>
-              <Link
-                href="/services"
-                className="inline-flex items-center justify-center border-2 border-green-600 text-green-700 hover:bg-green-50 px-8 py-3.5 rounded-lg font-semibold text-lg transition-colors"
-              >
-                View Services
-              </Link>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="inline-block text-green-700 font-medium text-sm tracking-wide uppercase mb-4">
+                Melbourne CBD &amp; Inner Suburbs
+              </span>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-green-900 leading-tight">
+                A clean home.
+                <br />
+                <span className="text-green-600">A calmer mind.</span>
+              </h1>
+              <p className="mt-6 text-lg sm:text-xl text-neutral-600 leading-relaxed max-w-2xl">
+                Professional residential cleaning that goes beyond surface-level tidying.
+                Reclaim your time, reduce stress and thrive in a space that feels truly
+                refreshed.
+              </p>
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white px-8 py-3.5 rounded-lg font-semibold text-lg transition-colors"
+                >
+                  Get a Free Quote
+                </Link>
+                <Link
+                  href="/services"
+                  className="inline-flex items-center justify-center border-2 border-green-600 text-green-700 hover:bg-green-50 px-8 py-3.5 rounded-lg font-semibold text-lg transition-colors"
+                >
+                  View Services
+                </Link>
+              </div>
+            </div>
+            <div className="relative hidden lg:block">
+              <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/hero-jade.jpg"
+                  alt="Jade from Jade's Reset Cleaning wiping a kitchen counter with eco-friendly products"
+                  fill
+                  className="object-cover object-top"
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+              <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-lg p-4 z-10">
+                <div className="flex items-center gap-2">
+                  <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                    <svg className="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-green-900 text-sm">Eco-Friendly</p>
+                    <p className="text-xs text-neutral-500">Natural products only</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-green-100/40 to-transparent hidden lg:block" />
       </section>
 
       {/* Services Section */}
