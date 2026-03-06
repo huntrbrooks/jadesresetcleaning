@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -18,17 +19,20 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-green-600 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-sm sm:text-lg">J</span>
-            </div>
-            <div>
-              <span className="text-lg sm:text-xl font-bold text-green-800">
-                Jade&apos;s Reset
-              </span>
-              <span className="hidden sm:inline text-sm text-sage-600 ml-1">
-                Cleaning
-              </span>
-            </div>
+            <Image
+              src="/logo-icon.png"
+              alt="Jade's Reset Cleaning"
+              width={44}
+              height={44}
+              className="w-9 h-9 sm:w-11 sm:h-11"
+            />
+            <Image
+              src="/logo-text.png"
+              alt="Jade Reset Cleaning"
+              width={160}
+              height={32}
+              className="h-6 sm:h-8 w-auto"
+            />
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">

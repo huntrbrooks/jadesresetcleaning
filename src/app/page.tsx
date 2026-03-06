@@ -344,6 +344,13 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-16 sm:py-24 bg-green-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <Image
+            src="/logo-icon.png"
+            alt="Jade Reset Cleaning"
+            width={80}
+            height={80}
+            className="w-16 sm:w-20 h-auto mx-auto mb-6 brightness-0 invert"
+          />
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Ready to Reset Your Home?
           </h2>

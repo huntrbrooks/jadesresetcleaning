@@ -58,6 +58,13 @@ export default function AboutPage() {
       <section className="bg-gradient-to-br from-green-50 via-white to-sage-50 py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
+            <Image
+              src="/logo-full.png"
+              alt="Jade Reset Cleaning"
+              width={200}
+              height={200}
+              className="w-36 sm:w-44 h-auto mx-auto mb-6"
+            />
             <h1 className="text-4xl sm:text-5xl font-bold text-green-900">
               Meet Jade
             </h1>

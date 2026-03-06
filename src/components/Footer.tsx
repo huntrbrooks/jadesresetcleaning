@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -6,12 +7,13 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">J</span>
-              </div>
-              <span className="text-lg font-bold">Jade&apos;s Reset Cleaning</span>
-            </div>
+            <Image
+              src="/logo-full.png"
+              alt="Jade Reset Cleaning"
+              width={180}
+              height={180}
+              className="w-32 sm:w-40 h-auto mb-4 brightness-0 invert"
+            />
             <p className="text-green-200 text-sm leading-relaxed">
               Professional residential cleaning in Melbourne CBD and inner suburbs.
               Transforming homes into calm, organised spaces.
