@@ -135,19 +135,22 @@ const steps = [
 
 const testimonials = [
   {
-    name: "Sarah M.",
+    name: "Gerard. G",
     location: "Fitzroy",
     text: "Jade is incredible. My apartment has never felt so peaceful. She goes above and beyond every single time and I genuinely look forward to coming home after she's been.",
+    image: "/testimonial-gerard.jpg",
   },
   {
-    name: "Tom & Lisa K.",
+    name: "Egal. G",
     location: "South Yarra",
     text: "We used Jade for our end of lease clean and got our full bond back with zero issues. She was thorough, punctual and so easy to communicate with. Highly recommend.",
+    image: "/testimonial-egal.jpg",
   },
   {
-    name: "Rebecca D.",
+    name: "Marion. S",
     location: "Carlton",
     text: "The decluttering session changed my life. Jade helped me sort through years of accumulated stuff with zero judgement. My home finally feels like it has room to breathe.",
+    image: "/testimonial-marion.jpg",
   },
 ];
 
@@ -331,9 +334,20 @@ export default function Home() {
                 <p className="text-neutral-600 leading-relaxed mb-4 italic">
                   &ldquo;{t.text}&rdquo;
                 </p>
-                <div>
-                  <p className="font-semibold text-green-900">{t.name}</p>
-                  <p className="text-sm text-neutral-400">{t.location}</p>
+                <div className="flex items-center gap-3">
+                  <div className="relative h-12 w-12 overflow-hidden rounded-full ring-2 ring-green-100">
+                    <Image
+                      src={t.image}
+                      alt={`${t.name} testimonial profile`}
+                      fill
+                      className="object-cover"
+                      sizes="48px"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-green-900">{t.name}</p>
+                    <p className="text-sm text-neutral-400">{t.location}</p>
+                  </div>
                 </div>
               </div>
             ))}
