@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -117,15 +118,28 @@ export default function ServicesPage() {
     <>
       {/* Hero */}
       <section className="bg-gradient-to-br from-green-50 via-white to-sage-50 py-16 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold text-green-900">
-            Services
-          </h1>
-          <p className="mt-4 text-lg text-neutral-500 max-w-2xl mx-auto">
-            Every home is different. That&apos;s why I offer a range of services designed
-            to meet you exactly where you are — whether that&apos;s a weekly refresh or a
-            full-scale transformation.
-          </p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-4xl sm:text-5xl font-bold text-green-900">
+                Services
+              </h1>
+              <p className="mt-4 text-lg text-neutral-500 max-w-2xl">
+                Every home is different. That&apos;s why I offer a range of services designed
+                to meet you exactly where you are — whether that&apos;s a weekly refresh or a
+                full-scale transformation.
+              </p>
+            </div>
+            <div className="relative aspect-[5/4] rounded-2xl overflow-hidden shadow-xl hidden lg:block">
+              <Image
+                src="/jade-vacuuming.png"
+                alt="Jade vacuuming a living room floor during a regular cleaning session"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+          </div>
         </div>
       </section>
 

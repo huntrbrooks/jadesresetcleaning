@@ -190,7 +190,7 @@ export default function Home() {
             <div className="relative hidden lg:block">
               <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/hero-jade.jpg"
+                  src="/hero-jade.png"
                   alt="Jade from Jade's Reset Cleaning wiping a kitchen counter with eco-friendly products"
                   fill
                   className="object-cover object-top"

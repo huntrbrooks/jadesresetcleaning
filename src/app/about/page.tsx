@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -70,10 +71,17 @@ export default function AboutPage() {
       {/* Story Section */}
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-8">
-              <span className="text-green-700 text-3xl font-bold">J</span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-xl order-2 lg:order-1">
+              <Image
+                src="/jade-organising.png"
+                alt="Jade organising and decluttering a living room entertainment unit"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
+            <div className="order-1 lg:order-2">
             <div className="prose prose-lg max-w-none text-neutral-600">
               <p className="text-xl leading-relaxed">
                 Hi, I&apos;m Jade — and I believe your home should be a place where you can
@@ -102,6 +110,7 @@ export default function AboutPage() {
                 decluttering, or a complete reset after a hectic period — I&apos;m here
                 to help you reclaim your space and your time.
               </p>
+            </div>
             </div>
           </div>
         </div>
