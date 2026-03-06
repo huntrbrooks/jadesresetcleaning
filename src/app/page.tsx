@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import BeforeAfterSection from "@/components/BeforeAfter";
 
 const services = [
   {
@@ -137,20 +138,20 @@ const testimonials = [
   {
     name: "Gerard. G",
     location: "Fitzroy",
-    text: "Jade is incredible. My apartment has never felt so peaceful. She goes above and beyond every single time and I genuinely look forward to coming home after she's been.",
     image: "/testimonial-gerard.jpg",
+    text: "Jade is incredible. My apartment has never felt so peaceful. She goes above and beyond every single time and I genuinely look forward to coming home after she's been.",
   },
   {
     name: "Egal. G",
     location: "South Yarra",
-    text: "We used Jade for our end of lease clean and got our full bond back with zero issues. She was thorough, punctual and so easy to communicate with. Highly recommend.",
     image: "/testimonial-egal.jpg",
+    text: "We used Jade for our end of lease clean and got our full bond back with zero issues. She was thorough, punctual and so easy to communicate with. Highly recommend.",
   },
   {
     name: "Marion. S",
     location: "Carlton",
-    text: "The decluttering session changed my life. Jade helped me sort through years of accumulated stuff with zero judgement. My home finally feels like it has room to breathe.",
     image: "/testimonial-marion.jpg",
+    text: "The decluttering session changed my life. Jade helped me sort through years of accumulated stuff with zero judgement. My home finally feels like it has room to breathe.",
   },
 ];
 
@@ -252,6 +253,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <BeforeAfterSection />
 
       {/* Why Choose Section */}
       <section className="py-16 sm:py-24 bg-sage-50">
